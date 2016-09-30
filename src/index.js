@@ -5,11 +5,9 @@ import { render } from 'react-dom';
 // CSS 
 import './css/style.css';
 
-// Components
-import App from './components/App';
+
+import routes from './router'
 
 // Render
-render(
-  <App />,
-  document.getElementById('root')
+render(routes, document.getElementById('root')
 );
