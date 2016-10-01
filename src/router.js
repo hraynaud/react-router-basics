@@ -20,6 +20,7 @@ const routes = (
     <Route  component={App}>
       <Route path="/" component={Home}/>
       <Route path="about" component={About}/>
+      <Route path="about" component={About} title="About Herby"/>
       <Route path="teachers" component={Teachers}/>
       <Route path="courses" component={Courses}>
         <Route path="html" component={HTML}/>
