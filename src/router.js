@@ -9,6 +9,9 @@ import App from './components/App';
 import Home from './components/Home';
 import About from './components/About';
 import Courses from './components/Courses';
+import HTML from './components/courses/HTML';
+import CSS from './components/courses/CSS';
+import Javascript from './components/courses/Javascript';
 import Teachers from './components/Teachers';
 
 const routes = (
@@ -16,8 +19,12 @@ const routes = (
     <Route  component={App}>
       <Route path="/" component={Home}/>
       <Route path="about" component={About}/>
-      <Route path="courses" component={Courses}/>
       <Route path="teachers" component={Teachers}/>
+      <Route path="courses" component={Courses}>
+        <Route path="html" component={HTML}/>
+        <Route path="css" component={CSS}/>
+        <Route path="javascript" component={Javascript}/>
+      </Route>
     </Route>
   </Router>
 );
