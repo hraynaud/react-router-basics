@@ -9,24 +9,22 @@ import App from './components/App';
 import Home from './components/Home';
 import About from './components/About';
 import Courses from './components/Courses';
-import HTML from './components/courses/HTML';
-import CSS from './components/courses/CSS';
-import Javascript from './components/courses/Javascript';
+import CourseContainer from './components/courses/CourseContainer';
 import Teachers from './components/Teachers';
 import NotFound from './components/NotFound';
+import CourseList from './data/courses';
 
 const routes = (
   <Router history={browserHistory}>
     <Route  component={App}>
       <Route path="/" component={Home}/>
-      <Route path="about" component={About}/>
       <Route path="about" component={About} title="About Herby"/>
       <Route path="teachers" component={Teachers}/>
       <Route path="courses" component={Courses}>
-        <Route path="html" component={HTML}/>
-        <Route path="css" component={CSS}/>
-        <Route path="javascript" component={Javascript}/>
         <IndexRedirect to="html" />
+        <Route path="html" component={CourseContainer} data={CourseList.HTML}/>
+        <Route path="css" component={CourseContainer} data={CourseList.CSS}/>
+        <Route path="javascript" component={CourseContainer} data={CourseList.JS}/>
       </Route>
       <Route path="*" component={NotFound}/>
     </Route>

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import Course from './Course';
-import CourseList from '../../data/courses';
 
-class CSS extends Component {
+
+class CourseContainer extends Component {
   render() {
-    let courseList = CourseList.CSS;
+    let courseList = this.props.route.data;
     let courses = courseList.map((course) => {
       return <Course title={course.title}
                      desc={course.description}
@@ -22,4 +22,4 @@ class CSS extends Component {
   }
 }
 
-export default CSS;
+export default CourseContainer;
