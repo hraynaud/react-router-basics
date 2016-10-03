@@ -27,7 +27,7 @@ const routes = (
         <Route path="css" component={CourseContainer} data={CourseList.CSS}/>
         <Route path="javascript" component={CourseContainer} data={CourseList.JS}/>
       </Route>
-      <Route path="featured/:topic/:name" component={Featured}>
+      <Route path="featured/:topic(/:name)" component={Featured}>
       </Route>
       <Route path="*" component={NotFound}/>
     </Route>
